@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>{{ title }}</title>
+<meta name="description" content="">
+<meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/style.css">
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/vue.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top r_nav">
+  	<div class="container-fluid">
+	    <div class="navbar-header">
+      		<a class="navbar-brand" href="">{{ logo }}</a>
+	    </div>
+	    <div class="collapse navbar-collapse">
+	      	<ul class="nav navbar-nav">
+		        <li class="active"><a href="javascript:;" data-index="0">{{ first }}</a></li>
+		        <li class="hash_button" v-for="list in lists">
+			    	<a href="javascript:;" data-index="{{ $index + 1 }}">{{ list.text }}</a>
+			    </li>
+	      	</ul>
+	    </div>
+  	</div>
+</nav>
+<div class="r_section_box">
+	<section class="r_section section_one">
+		<div class="section_inner">
+			<div class="r_ball">
+				<div class="r_ball_box">
+					<div class="r_ball_line r_ball_line_1"><span class="r_ball_text">{{ one }}</span></div>
+					<div class="r_ball_line r_ball_line_2"><span class="r_ball_text">{{ two }}</span></div>
+					<div class="r_ball_inner"></div>
+					<div class="r_ball_line r_ball_line_3"><span class="r_ball_text">{{ three }}</span></div>
+					<div class="r_ball_line r_ball_line_4"><span class="r_ball_text">{{ four }}</span></div>
+				</div>
+			</div>
+			<div class="r_text">
+				<div class="r_text_inner">
+					<p><h2>关于我</h2></p>
+					<p>崇尚自由，脚踏实地。</p>
+					<p>爱好广阔的网络世界，又喜欢严谨不苟的代码生涯。</p>
+					<p>从小就是一个喜欢技术的孩子，初中开始写过第一个网页;</p>
+					<p>大学开始学习web前端技术;</p>
+					<p>大学期间做了大大小小数十个网站，做过站长、写过应用。</p>
+					<p>现在在爱奇艺占坑写代码。</p>
+					<p>对前端一片热爱！</p>
+				</div> 
+			</div>
+		</div>
+	</section>
+	<section class="r_section section_two">
+		<div class="r_two_text">
+			<div class="r_two_text_left">
+	            <p>1、热爱前端工作，具有良好团队合作精神，有责任心与学习能力；</p>
+	            <p>2、熟悉Web标准、HTML，JavaScript，CSS等技术，熟悉页面架构和DIV+CSS布局；</p>
+	            <p>3、能够手写代码、运用CSS、JS构建动态网页，实际动手做过网站；</p>
+	            <p>4、熟悉针对主流浏览器的代码兼容优化；</p>
+	            <p>5、计算机相关专业。</p>
+	        </div>
+			<ul class="r_skill_list">
+				<li class="r_skill_li" v-for="skill in skills">
+					<sapn class="r_skill_name input-group-addon">{{ skill.name }}</sapn>
+					<div class="progress r_skill_score">
+  						<div class="progress-bar" v-on:click="clickBtn" role="progressbar" aria-valuenow="{{ skill.score }}" aria-valuemin="0" aria-valuemax="100">
+    						{{ skill.title }}
+  						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="r_section section_three">
+		<div class="r_three_text">
+			<ul class="r_three_inner">
+				<li class="r_three_inner_li r_three_inner_li_1">
+					<div class="r_three_desc">
+						<h3>内部活动管理平台</h3>
+						<p>1、组织改版重构活动管理平台</p>
+						<p>2、负责参与完成页面设计、构建，前后端逻辑开发</p>
+					</div>
+				</li>
+				<li class="r_three_inner_li r_three_inner_li_2">
+					<div class="r_three_desc">
+						<h3>客户端本地开发</h3>
+						<p>1、优化客户端本地开发环境</p>
+						<p>2、使用nodejs的express框架对客户端本地开发环境进行优化</p>
+						<p>3、完成客户端本地环境一键化搭建，提升开发环境友好度</p>
+					</div>
+				</li>
+				<li class="r_three_inner_li r_three_inner_li_3">
+					<div class="r_three_desc">
+						<h3>Express私人项目</h3>
+						<p>1、以Express为架构做的一些小工具</p>
+						<p>2、<a href="http://tool.itbugs.cn:3000/" target="_blank">网络记事本</a></p>
+						<p>3、<a href="http://tool.itbugs.cn:3000/express/" target="_blank">快递查询</a></p>
+					</div>
+				</li>
+				<!-- <li class="r_three_inner_li r_three_inner_li_4">
+					<div class="r_three_desc">
+						<h3>客户端本地开发</h3>
+						<p>1、优化客户端本地开发环境</p>
+						<p>2、使用nodejs的express框架对客户端本地开发环境进行优化</p>
+						<p>3、完成客户端本地环境一键化搭建，提升开发环境友好度</p>
+					</div>
+				</li>
+				<li class="r_three_inner_li r_three_inner_li_5">
+					<div class="r_three_desc">
+						<h3>客户端本地开发</h3>
+						<p>1、优化客户端本地开发环境</p>
+						<p>2、使用nodejs的express框架对客户端本地开发环境进行优化</p>
+						<p>3、完成客户端本地环境一键化搭建，提升开发环境友好度</p>
+					</div>
+				</li> -->
+			</ul>
+			<button class="r_three_pre btn btn-success">上一个</button>
+			<button class="r_three_next btn btn-success">下一个</button>
+		</div>
+	</section>
+	<section class="r_section section_four">
+		<div class="r_four_text">
+            <div class="r_four_text_1">
+                <h2>联系方式</h2>
+                <p>邮　　箱：714756603@qq.com</p>
+                <p>手　　机：17600878121</p>
+                <p>Q　　Q：714756603</p>
+                <p>微　　博：@宇轩阁主人</p>
+                <p>Github：<a href="http://github.com/yuxuangezhu">@yuxuangezhu</a></p>
+                <p>个人网站：<a href="http://itbugs.cn">http://itbugs.cn</a></p>
+                <p><a href="./images/down.pdf">如需文档简历请点击下载</a></p>
+            </div>
+            <div class="r_four_text_2">
+                <h2>个人资料</h2>
+                <p>姓　　名：王军</p>
+                <p>性　　别：男<span style="margin-left:10px;">年龄：24</span></p>
+                <p>籍　　贯：山东省临沂市</p>
+                <p>民　　族：汉族</p>
+                <p>政治面貌：共青团员</p>
+                <p>学　　历：本科</p>
+            </div>
+            <div class="r_four_text_3">
+                <h2>关于我</h2>
+                <p>前端程序猿一只</p>
+                <p>爱好广阔的网络世界，又喜欢严谨不苟的代码生涯。</p>
+            </div>
+		</div>
+	</section>
+</div>
+<!-- <section class="r_section section_five">fghj</section> -->
+<script type="text/javascript" src="./js/common.js"></script>
+</body>
+</html>
