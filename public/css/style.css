@@ -248,11 +248,13 @@ a {
 .r_three_pre {
     position: fixed;
     left: 40%;
+    z-index: 100;
 }
 
 .r_three_next {
     position: fixed;
     right: 40%;
+    z-index: 100;
 }
 .r_four_text {
     width: 500px;
