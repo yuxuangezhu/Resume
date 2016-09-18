@@ -249,12 +249,14 @@ a {
     position: fixed;
     left: 40%;
     z-index: 100;
+    top: 360px;
 }
 
 .r_three_next {
     position: fixed;
     right: 40%;
     z-index: 100;
+    top: 360px;
 }
 .r_four_text {
     width: 500px;
