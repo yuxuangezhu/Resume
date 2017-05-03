@@ -121,7 +121,6 @@ $(document).ready(function() {
 			
 		}
 	var event = {
-			
 		}
 	// vueBox('#app', data, event)
 	function delay(fn, time) {
